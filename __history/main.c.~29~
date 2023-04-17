@@ -1,0 +1,31 @@
+#include <main.h>
+int K[] = {0x80,0xf7,0xeb,0xdd,0xbe};
+
+void main()
+{
+   set_tris_b(0x00);
+   set_tris_c(0x00);
+   output_b(0x00);
+   output_c(0x00);
+   
+   while(TRUE)
+   {
+   //8 ms
+     output_c(0b00010000);
+     output_b(0b00000001);
+     delay_ms(8);
+     output_c(0b00001000);
+     output_b(0b11110110);
+     delay_ms(8);
+     output_c(0b00000100);
+     output_b(0b11110110);
+     delay_ms(8);
+     output_c(0b00000010);
+     output_b(0b11110110);
+     delay_ms(8);
+      output_c(0b00000001);
+     output_b(0b00000001);
+      delay_ms(8);
+   }
+
+}

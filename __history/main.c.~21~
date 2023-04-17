@@ -1,0 +1,17 @@
+#include <main.h>
+
+void main()
+{
+   set_tris_b(0x00);
+   set_tris_c(0x00);
+   output_b(0x00);
+   output_c(0x00);
+   
+   while(TRUE)
+   {
+   //8 ms
+     output_c(0b00010000);
+     output_b(0b00000001);
+   }
+
+}
